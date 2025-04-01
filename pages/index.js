@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Header from '../components/Header';
 import ProfileCard from '../components/ProfileCard';
 import RecommendationForm from '../components/RecommendationForm';

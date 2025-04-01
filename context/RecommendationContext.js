@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { format } from 'date-fns';
 import { useUser } from './UserContext';
 
@@ -57,3 +57,5 @@ export const RecommendationProvider = ({ children }) => {
 };
 
 export const useRecommendations = () => useContext(RecommendationContext);
+
+export { RecommendationContext };

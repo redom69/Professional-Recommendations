@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useRecommendations } from '../context/RecommendationContext';
 import RecommendationItem from './RecommendationItem';
 

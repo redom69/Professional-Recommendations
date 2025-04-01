@@ -1,7 +1,7 @@
-// components/RecommendationItem.jsx
+import React, { useState } from 'react';
+
 import { useUser } from '../context/UserContext';
 import { useRecommendations } from '../context/RecommendationContext';
-import { useState } from 'react';
 
 export default function RecommendationItem({ rec }) {
   const { mockUser } = useUser();
