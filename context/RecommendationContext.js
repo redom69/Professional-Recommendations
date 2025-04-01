@@ -26,9 +26,30 @@ export const RecommendationProvider = ({ children }) => {
     setRecommendations((prev) => [newRecommendation, ...prev]);
   };
 
+  const removeRecommendation = (id, userName) => {
+    setRecommendations((prev) =>
+      prev.filter((rec) => rec.id !== id || rec.author.name !== userName)
+    );
+  };
+
+  const editRecommendation = (id, newText) => {
+    setRecommendations((prev) =>
+      prev.map((recommendation) =>
+        recommendation.id === id
+          ? { ...recommendation, content: newText }
+          : recommendation
+      )
+    );
+  };
+
   return (
     <RecommendationContext.Provider
-      value={{ recommendations, addRecommendation }}
+      value={{
+        recommendations,
+        addRecommendation,
+        removeRecommendation,
+        editRecommendation,
+      }}
     >
       {children}
     </RecommendationContext.Provider>
