@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+
+/out
+
+/coverage
+
+.next/
+build/
